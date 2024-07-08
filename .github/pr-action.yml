@@ -23,7 +23,7 @@ jobs:
         
       - name: Run your custom action
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         run: node index.js
         with:
           owner: ${{ github.repository_owner }}
