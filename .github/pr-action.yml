@@ -22,6 +22,7 @@ jobs:
         run: npm ci
         
       - name: Run your custom action
+        uses: ./action.yml
         env:
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
         run: node index.js
