@@ -2,7 +2,7 @@ name: Testing PR to main branch
 on:
   push:
     branches:
-      - main
+      - pr-test
 jobs:
   build:
      runs-on: ubuntu-latest
