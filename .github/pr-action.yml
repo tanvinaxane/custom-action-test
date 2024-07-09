@@ -1,4 +1,4 @@
-name: PR custom action test
+name: PR custom action tests
 
 on: 
   pull_request:
