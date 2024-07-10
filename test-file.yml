@@ -2,7 +2,7 @@ name: Testing PR to main branch!
 on:
   pull_request:
     branches:
-      - pr-test
+      - main
 jobs:
   build:
      runs-on: ubuntu-latest
