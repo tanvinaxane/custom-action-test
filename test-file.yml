@@ -1,0 +1,13 @@
+name: Testing PR to main branch
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+     runs-on: ubuntu-latest
+     env:
+       token: ${{ secrets.PAT }}
+    steps:
+       - name: Testing
+         run: echo 'This is a test branch!'
