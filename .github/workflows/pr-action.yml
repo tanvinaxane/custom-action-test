@@ -37,7 +37,7 @@ jobs:
          git config --global user.name ${{ github.repository_owner }}
          git checkout pr-test
          git add .
-         git pull
+         git pull pr-test
          git status
          git commit -m "Commit changes"
          git push -u origin pr-test
