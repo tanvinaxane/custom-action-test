@@ -1,10 +1,11 @@
 name: Testing PR to main branch
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - pr-test
 jobs:
   build:
      runs-on: ubuntu-latest
     steps:
-      - run: echo 'This is a test branch!'
+       - name: Testing
+         run: echo 'This is a test branch!'
