@@ -36,8 +36,8 @@ jobs:
          git config --global user.email tanvinaxane@gmail.com
          git config --global user.name ${{ github.repository_owner }}
          git checkout pr-test
-         git pull
          git add .
+         git pull
          git status
          git commit -m "Commit changes"
          git push origin main
