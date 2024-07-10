@@ -1,4 +1,4 @@
-name: Testing PR to main branch
+name: Testing PR to main branch!
 on:
   push:
     branches:
