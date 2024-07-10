@@ -30,6 +30,7 @@ jobs:
          git config --global user.email tanvinaxane@gmail.com
          git config --global user.name ${{ github.repository_owner }}
          git add package-lock.json
+         git status
          git commit -m "Add package-lock.json"
          git push
         
