@@ -40,7 +40,7 @@ jobs:
          git add .
          git status
          git commit -m "Commit changes"
-         git push pr-test
+         git push origin main
 
       - name: Run your custom action
         uses: ./custom-action-test/action.yml
