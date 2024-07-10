@@ -39,8 +39,9 @@ jobs:
          git checkout ${{ github.ref }}
          git add .
          git status
+         git checkout pr-test
          git commit -m "Commit changes"
-         git push origin main
+         git push origin pr-test
 
       - name: Run your custom action
         uses: ./custom-action-test/action.yml
