@@ -30,8 +30,8 @@ jobs:
         run: |
          git config --global user.email tanvinaxane@gmail.com
          git config --global user.name ${{ github.repository_owner }}
-         git checkout ${{ github.ref }}
          git pull
+         git checkout ${{ github.ref }}
          git add .
          git status
          git commit -m "Commit changes"
