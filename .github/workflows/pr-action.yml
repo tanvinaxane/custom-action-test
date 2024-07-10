@@ -1,11 +1,12 @@
 name: PR custom action tests
 
 on: 
- # pull_request:
-  #  types: [opened, reopened, synchronize]
-  push: 
-    branches: 
-    - main
+ pull_request:
+   types: [opened, reopened, synchronize]
+   branches: main
+  # push: 
+  #   branches: 
+  #   - main
 
 jobs:
   automate-pr-actions:
