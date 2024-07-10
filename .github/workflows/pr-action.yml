@@ -27,10 +27,11 @@ jobs:
         uses: ./action.yml
         env:
           PAT: ${{ secrets.PAT }}
-        run: node index.js
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
           pr_number: ${{ github.event.number }}
           token: ${{ secrets.PAT }}
 
+      - name: Execute JS code
+        run: node index.js
