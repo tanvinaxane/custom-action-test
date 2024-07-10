@@ -29,10 +29,10 @@ jobs:
         run: |
          git config --global user.email tanvinaxane@gmail.com
          git config --global user.name ${{ github.repository_owner }}
-         git add package-lock.json
+         git add .
          git status
-         git commit -m "Add package-lock.json"
-         git push
+         git commit -m "Commit changes"
+         git push origin main
         
       - name: Run your custom action
         uses: ./custom-action-test/action.yml
