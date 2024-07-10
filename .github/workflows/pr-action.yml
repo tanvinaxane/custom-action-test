@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with: 
-          ref: 'main'
       
       - name: Setup Node.js                            #will install node version 16
         uses: actions/setup-node@v2
@@ -28,6 +26,11 @@ jobs:
           npm install
           npm ci
 
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with: 
+         ref: ${{ github.head.ref }}
+        
       - name: Add package-lock.json file
         run: |
          git config --global user.email tanvinaxane@gmail.com
@@ -39,11 +42,6 @@ jobs:
          git commit -m "Commit changes"
          git push origin main
 
-      - name: Checkout code
-        uses: actions/checkout@v2
-        with: 
-         ref: 'main'
-        
       - name: Run your custom action
         uses: ./custom-action-test/action.yml
         env:
